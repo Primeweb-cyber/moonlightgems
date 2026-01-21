@@ -12,13 +12,17 @@
 
 *{box-sizing:border-box}
 html,body{margin:0; padding:0}
-body{
-  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+
+  /* DARK LUXURY BACKGROUND */
   background:
-    radial-gradient(1200px 520px at 20% 10%, rgba(212,175,55,.16), transparent 60%),
-    radial-gradient(900px 420px at 90% 20%, rgba(255,255,255,.06), transparent 55%),
-    linear-gradient(180deg, #0b0b10 0%, #0d0d14 40%, #0b0b10 100%);
-  color:var(--text);
+    radial-gradient(1200px 600px at 20% 10%, rgba(212,175,55,0.18), transparent 60%),
+    radial-gradient(900px 500px at 80% 20%, rgba(255,255,255,0.08), transparent 55%),
+    linear-gradient(180deg, #0b0b10 0%, #0e0e16 50%, #0b0b10 100%);
+
+  color: #f5f5f7;
 }
 
 a{color:inherit; text-decoration:none}
