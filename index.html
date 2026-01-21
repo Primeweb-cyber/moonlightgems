@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Moonlight Gems | Artificial Jewelry</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="header">
+    <div class="container nav">
+      <div class="brand">Moonlight Gems</div>
+      <nav class="menu">
+        <a href="#collections">Collections</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <h1>Artificial Jewelry, Designed to Shine</h1>
+          <p class="subtext">
+            A school project demo website showcasing modern fashion jewelry with a clean, web-app style layout.
+          </p>
+          <div class="cta-row">
+            <a class="btn" href="#gallery">View Gallery</a>
+            <a class="btn btn-outline" href="#collections">Explore Collections</a>
+          </div>
+          <p class="note">Disclaimer: This website was created using AI for an academic project.</p>
+        </div>
+
+        <div class="hero-card">
+          <div class="badge">Featured</div>
+          <h3>Best Sellers</h3>
+          <ul class="mini-list">
+            <li>Luna Glow Ring</li>
+            <li>Crystal Bloom Pendant</li>
+            <li>Aurora Stud Earrings</li>
+            <li>Infinity Glow Bangle</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="collections" class="section">
+      <div class="container">
+        <h2>Collections</h2>
+        <div class="cards">
+          <div class="card">
+            <h3>Aurora Collection</h3>
+            <p>Soft sparkle and elegant everyday pieces.</p>
+          </div>
+          <div class="card">
+            <h3>Moonlight Series</h3>
+            <p>Minimal, modern styles with a premium look.</p>
+          </div>
+          <div class="card">
+            <h3>Nova Edit</h3>
+            <p>Bold, trendy designs made for standout outfits.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="gallery" class="section alt">
+      <div class="container">
+        <h2>Product Gallery</h2>
+        <p class="subtext">Replace the placeholder cards with your own jewelry images later.</p>
+
+        <div class="grid">
+          <div class="product">
+            <div class="ph">Image</div>
+            <div class="pname">Luna Glow Ring</div>
+            <div class="pdesc">Glossy finish with a crystal-inspired centerpiece.</div>
+          </div>
+          <div class="product">
+            <div class="ph">Image</div>
+            <div class="pname">Crystal Bloom Necklace</div>
+            <div class="pdesc">A delicate pendant with a floral sparkle design.</div>
+          </div>
+          <div class="product">
+            <div class="ph">Image</div>
+            <div class="pname">Aurora Stud Earrings</div>
+            <div class="pdesc">Minimal studs for everyday wear and gifting.</div>
+          </div>
+          <div class="product">
+            <div class="ph">Image</div>
+            <div class="pname">Infinity Glow Bangle</div>
+            <div class="pdesc">Classic bangle silhouette with a modern shine.</div>
+          </div>
+          <div class="product">
+            <div class="ph">Image</div>
+            <div class="pname">Velvet Halo Ring</div>
+            <div class="pdesc">Rounded halo design with a premium look.</div>
+          </div>
+          <div class="product">
+            <div class="ph">Image</div>
+            <div class="pname">Golden Thread Bracelet</div>
+            <div class="pdesc">Chain bracelet style with elegant detail.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="section">
+      <div class="container">
+        <h2>About</h2>
+        <p>
+          Moonlight Gems is a concept website created for a school assignment to demonstrate AI-assisted web design,
+          clean layout, and product-style presentation for artificial jewelry.
+        </p>
+      </div>
+    </section>
+
+    <section id="contact" class="section alt">
+      <div class="container">
+        <h2>Contact</h2>
+        <p class="subtext">This form is for demonstration (no backend).</p>
+
+        <form class="form" onsubmit="return false;">
+          <label>
+            Name
+            <input type="text" placeholder="Your name" />
+          </label>
+          <label>
+            Email
+            <input type="email" placeholder="your@email.com" />
+          </label>
+          <label>
+            Message
+            <textarea placeholder="Write your message..."></textarea>
+          </label>
+          <button class="btn" type="submit">Send Message</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div>© <span id="year"></span> Moonlight Gems</div>
+      <div class="footnote">This website was created using AI for an academic project.</div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
