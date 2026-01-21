@@ -1,9 +1,9 @@
 const products = [
-  { id: 1, name: "Luna Glow Ring", category: "Rings", price: 14.99, tags: ["Best Seller", "Minimal"], featured: true, newest: 4, img: "" , desc:"Glossy finish with a crystal-inspired centerpiece. Lightweight and comfortable for daily wear."},
+  { id: 1, name: "Luna Glow Ring", category: "Rings", price: 14.99, tags: ["Best Seller", "Minimal"], featured: true, newest: 4, img: "ring.jpg" , desc:"Glossy finish with a crystal-inspired centerpiece. Lightweight and comfortable for daily wear."},
   { id: 2, name: "Velvet Halo Ring", category: "Rings", price: 16.50, tags: ["Premium Look"], featured: true, newest: 3, img: "", desc:"Rounded halo design that looks premium while staying affordable and lightweight."},
-  { id: 3, name: "Crystal Bloom Necklace", category: "Necklaces", price: 19.99, tags: ["Signature"], featured: true, newest: 5, img: "", desc:"Delicate pendant with a floral sparkle design — perfect for gifting or events."},
+  { id: 3, name: "Crystal Bloom Necklace", category: "Necklaces", price: 19.99, tags: ["Signature"], featured: true, newest: 5, img: "Necklace.jpg", desc:"Delicate pendant with a floral sparkle design — perfect for gifting or events."},
   { id: 4, name: "Moonlight Grace Necklace", category: "Necklaces", price: 18.25, tags: ["Minimal"], featured: false, newest: 2, img: "", desc:"A clean, elegant chain designed to elevate everyday outfits."},
-  { id: 5, name: "Aurora Stud Earrings", category: "Earrings", price: 11.99, tags: ["Best Seller"], featured: true, newest: 6, img: "", desc:"Minimal studs with a bright finish — everyday style that matches everything."},
+  { id: 5, name: "Aurora Stud Earrings", category: "Earrings", price: 11.99, tags: ["Best Seller"], featured: true, newest: 6, img: "Earrings", desc:"Minimal studs with a bright finish — everyday style that matches everything."},
   { id: 6, name: "Crystal Cascade Drops", category: "Earrings", price: 15.75, tags: ["Occasion"], featured: false, newest: 1, img: "", desc:"Drop earrings designed for events with a refined sparkle look."},
   { id: 7, name: "Infinity Glow Bangle", category: "Bracelets", price: 17.99, tags: ["Classic"], featured: true, newest: 7, img: "", desc:"Classic bangle silhouette with modern shine — pairs well with watches."},
   { id: 8, name: "Golden Thread Bracelet", category: "Bracelets", price: 13.49, tags: ["Minimal"], featured: false, newest: 8, img: "", desc:"Chain bracelet style with elegant detail and a soft gold-inspired finish."},
