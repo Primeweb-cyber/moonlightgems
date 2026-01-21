@@ -1,155 +1,291 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Moonlight Gems | Artificial Jewelry</title>
+  <meta name="description" content="Modern artificial jewelry showcase — academic project demo." />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <!-- Top Announcement -->
+  <div class="topbar">
+    <div class="container topbar-inner">
+      <span>Academic demo site • Artificial jewelry showcase • No payments</span>
+      <span class="topbar-pill">Deployed on GitHub Pages</span>
+    </div>
+  </div>
+
+  <!-- Header -->
   <header class="header">
-    <div class="container nav">
-      <div class="brand">Moonlight Gems</div>
-      <nav class="menu">
+    <div class="container header-inner">
+      <a class="brand" href="#">
+        <span class="brand-mark">MG</span>
+        <span class="brand-name">Moonlight Gems</span>
+      </a>
+
+      <nav class="nav">
         <a href="#collections">Collections</a>
-        <a href="#gallery">Gallery</a>
+        <a href="#shop">Shop</a>
         <a href="#about">About</a>
         <a href="#contact">Contact</a>
       </nav>
+
+      <div class="header-actions">
+        <button class="icon-btn" id="openSearch" aria-label="Open search">
+          <span class="icon">⌕</span>
+        </button>
+        <button class="icon-btn" id="openWishlist" aria-label="Open wishlist">
+          <span class="icon">♡</span>
+          <span class="badge" id="wishCount">0</span>
+        </button>
+      </div>
     </div>
   </header>
 
-  <main>
-    <section class="hero">
-      <div class="container hero-grid">
-        <div>
-          <h1>Artificial Jewelry, Designed to Shine</h1>
-          <p class="subtext">
-            A school project demo website showcasing modern fashion jewelry with a clean, web-app style layout.
-          </p>
-          <div class="cta-row">
-            <a class="btn" href="#gallery">View Gallery</a>
-            <a class="btn btn-outline" href="#collections">Explore Collections</a>
-          </div>
-          <p class="note">Disclaimer: This website was created using AI for an academic project.</p>
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container hero-grid">
+      <div class="hero-copy">
+        <div class="kicker">Artificial Jewelry • Modern Design</div>
+        <h1>Everyday sparkle, built like a real product app.</h1>
+        <p class="muted">
+          This is a school project demonstrating AI-assisted UI/UX, product browsing, filtering,
+          and a realistic jewelry catalog experience. No checkout or payments.
+        </p>
+
+        <div class="hero-cta">
+          <a class="btn primary" href="#shop">Browse Products</a>
+          <a class="btn ghost" href="#collections">View Collections</a>
         </div>
 
-        <div class="hero-card">
-          <div class="badge">Featured</div>
-          <h3>Best Sellers</h3>
-          <ul class="mini-list">
-            <li>Luna Glow Ring</li>
-            <li>Crystal Bloom Pendant</li>
-            <li>Aurora Stud Earrings</li>
-            <li>Infinity Glow Bangle</li>
+        <div class="trust-row">
+          <div class="trust">
+            <div class="trust-title">Premium Look</div>
+            <div class="trust-sub">Luxury-inspired UI</div>
+          </div>
+          <div class="trust">
+            <div class="trust-title">Fast & Responsive</div>
+            <div class="trust-sub">Mobile-first design</div>
+          </div>
+          <div class="trust">
+            <div class="trust-title">Safe Demo</div>
+            <div class="trust-sub">No payments collected</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-card">
+        <div class="hero-card-top">
+          <div>
+            <div class="hero-card-title">Featured Picks</div>
+            <div class="muted small">Top items this week</div>
+          </div>
+          <div class="pill">New</div>
+        </div>
+        <div class="mini-grid" id="featuredMiniGrid">
+          <!-- JS injects mini cards -->
+        </div>
+        <div class="hero-card-bottom muted small">
+          Tip: Use Search + Filters to explore the catalog.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Collections -->
+  <section class="section" id="collections">
+    <div class="container">
+      <div class="section-head">
+        <h2>Collections</h2>
+        <p class="muted">A realistic store layout: curated themes with consistent naming.</p>
+      </div>
+
+      <div class="cards">
+        <article class="card">
+          <div class="card-tag">Signature</div>
+          <h3>Aurora Collection</h3>
+          <p class="muted">Soft sparkle and elegant everyday pieces.</p>
+        </article>
+        <article class="card">
+          <div class="card-tag">Minimal</div>
+          <h3>Moonlight Series</h3>
+          <p class="muted">Clean silhouettes with a premium finish.</p>
+        </article>
+        <article class="card">
+          <div class="card-tag">Trend</div>
+          <h3>Nova Edit</h3>
+          <p class="muted">Bold looks designed for standout outfits.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Shop -->
+  <section class="section alt" id="shop">
+    <div class="container">
+      <div class="section-head">
+        <h2>Shop</h2>
+        <p class="muted">Browse products with filters — like a real web app.</p>
+      </div>
+
+      <div class="toolbar">
+        <div class="searchbox">
+          <span class="icon">⌕</span>
+          <input id="searchInput" type="search" placeholder="Search rings, necklaces, earrings..." />
+        </div>
+
+        <div class="filters">
+          <select id="categorySelect" aria-label="Category">
+            <option value="all">All Categories</option>
+            <option value="Rings">Rings</option>
+            <option value="Necklaces">Necklaces</option>
+            <option value="Earrings">Earrings</option>
+            <option value="Bracelets">Bracelets</option>
+            <option value="Sets">Sets</option>
+          </select>
+
+          <select id="sortSelect" aria-label="Sort">
+            <option value="featured">Sort: Featured</option>
+            <option value="price_low">Price: Low to High</option>
+            <option value="price_high">Price: High to Low</option>
+            <option value="newest">Newest</option>
+          </select>
+
+          <button class="btn ghost" id="clearBtn">Clear</button>
+        </div>
+      </div>
+
+      <div class="grid" id="productGrid">
+        <!-- JS injects product cards -->
+      </div>
+
+      <div class="footnote">
+        <strong>Disclaimer:</strong> This is an academic demo. Prices are illustrative, and checkout is disabled.
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section class="section" id="about">
+    <div class="container">
+      <div class="section-head">
+        <h2>About</h2>
+        <p class="muted">A short, school-friendly explanation that looks professional.</p>
+      </div>
+
+      <div class="two-col">
+        <div class="panel">
+          <h3>Project Overview</h3>
+          <p class="muted">
+            Moonlight Gems is a concept website created for an academic assignment. The objective is to demonstrate
+            AI-assisted website creation, modern UI/UX principles, and a realistic product catalog experience
+            (search, filtering, product cards, and a quick-view modal).
+          </p>
+          <div class="chip-row">
+            <span class="chip">HTML</span>
+            <span class="chip">CSS</span>
+            <span class="chip">JavaScript</span>
+            <span class="chip">GitHub Pages</span>
+          </div>
+        </div>
+
+        <div class="panel">
+          <h3>Design Goals</h3>
+          <ul class="muted list">
+            <li>Luxury-inspired look (dark theme + gold accents)</li>
+            <li>Mobile-first responsive layout</li>
+            <li>Clear navigation and consistent spacing</li>
+            <li>Realistic browsing experience without payments</li>
           </ul>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section id="collections" class="section">
-      <div class="container">
-        <h2>Collections</h2>
-        <div class="cards">
-          <div class="card">
-            <h3>Aurora Collection</h3>
-            <p>Soft sparkle and elegant everyday pieces.</p>
-          </div>
-          <div class="card">
-            <h3>Moonlight Series</h3>
-            <p>Minimal, modern styles with a premium look.</p>
-          </div>
-          <div class="card">
-            <h3>Nova Edit</h3>
-            <p>Bold, trendy designs made for standout outfits.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="gallery" class="section alt">
-      <div class="container">
-        <h2>Product Gallery</h2>
-        <p class="subtext">Replace the placeholder cards with your own jewelry images later.</p>
-
-        <div class="grid">
-          <div class="product">
-            <div class="ph">Image</div>
-            <div class="pname">Luna Glow Ring</div>
-            <div class="pdesc">Glossy finish with a crystal-inspired centerpiece.</div>
-          </div>
-          <div class="product">
-            <div class="ph">Image</div>
-            <div class="pname">Crystal Bloom Necklace</div>
-            <div class="pdesc">A delicate pendant with a floral sparkle design.</div>
-          </div>
-          <div class="product">
-            <div class="ph">Image</div>
-            <div class="pname">Aurora Stud Earrings</div>
-            <div class="pdesc">Minimal studs for everyday wear and gifting.</div>
-          </div>
-          <div class="product">
-            <div class="ph">Image</div>
-            <div class="pname">Infinity Glow Bangle</div>
-            <div class="pdesc">Classic bangle silhouette with a modern shine.</div>
-          </div>
-          <div class="product">
-            <div class="ph">Image</div>
-            <div class="pname">Velvet Halo Ring</div>
-            <div class="pdesc">Rounded halo design with a premium look.</div>
-          </div>
-          <div class="product">
-            <div class="ph">Image</div>
-            <div class="pname">Golden Thread Bracelet</div>
-            <div class="pdesc">Chain bracelet style with elegant detail.</div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="about" class="section">
-      <div class="container">
-        <h2>About</h2>
-        <p>
-          Moonlight Gems is a concept website created for a school assignment to demonstrate AI-assisted web design,
-          clean layout, and product-style presentation for artificial jewelry.
-        </p>
-      </div>
-    </section>
-
-    <section id="contact" class="section alt">
-      <div class="container">
+  <!-- Contact -->
+  <section class="section alt" id="contact">
+    <div class="container">
+      <div class="section-head">
         <h2>Contact</h2>
-        <p class="subtext">This form is for demonstration (no backend).</p>
+        <p class="muted">Demo contact form (no backend). Great for school submission.</p>
+      </div>
 
-        <form class="form" onsubmit="return false;">
-          <label>
-            Name
+      <form class="form" onsubmit="return false;">
+        <div class="form-row">
+          <label>Full Name
             <input type="text" placeholder="Your name" />
           </label>
-          <label>
-            Email
-            <input type="email" placeholder="your@email.com" />
+          <label>Email
+            <input type="email" placeholder="you@email.com" />
           </label>
-          <label>
-            Message
-            <textarea placeholder="Write your message..."></textarea>
-          </label>
-          <button class="btn" type="submit">Send Message</button>
-        </form>
-      </div>
-    </section>
-  </main>
+        </div>
+        <label>Message
+          <textarea placeholder="Write your message..."></textarea>
+        </label>
+        <button class="btn primary" type="submit">Send Message</button>
+      </form>
+    </div>
+  </section>
 
+  <!-- Footer -->
   <footer class="footer">
-    <div class="container">
-      <div>© <span id="year"></span> Moonlight Gems</div>
-      <div class="footnote">This website was created using AI for an academic project.</div>
+    <div class="container footer-inner">
+      <div>
+        <div class="footer-brand">Moonlight Gems</div>
+        <div class="muted small">This website was created using AI for an academic project.</div>
+      </div>
+      <div class="muted small">© <span id="year"></span> • primeweb-cyber • GitHub Pages</div>
     </div>
   </footer>
 
-  <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
-  </script>
+  <!-- Quick View Modal -->
+  <div class="modal" id="modal" aria-hidden="true">
+    <div class="modal-backdrop" id="modalBackdrop"></div>
+    <div class="modal-card" role="dialog" aria-modal="true" aria-label="Product quick view">
+      <button class="modal-close" id="modalClose" aria-label="Close">×</button>
+      <div class="modal-grid">
+        <div class="modal-img" id="modalImg">Image</div>
+        <div>
+          <div class="pill" id="modalCategory">Category</div>
+          <h3 class="modal-title" id="modalTitle">Title</h3>
+          <div class="modal-price" id="modalPrice">$0</div>
+          <p class="muted" id="modalDesc"></p>
+
+          <div class="modal-actions">
+            <button class="btn primary" id="wishBtn">♡ Add to Wishlist</button>
+            <button class="btn ghost" id="closeBtn2">Close</button>
+          </div>
+
+          <div class="muted small" style="margin-top:10px;">
+            Demo only • No checkout • Educational use
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Wishlist Drawer (simple) -->
+  <div class="drawer" id="drawer" aria-hidden="true">
+    <div class="drawer-backdrop" id="drawerBackdrop"></div>
+    <div class="drawer-panel">
+      <div class="drawer-head">
+        <div>
+          <div class="drawer-title">Wishlist</div>
+          <div class="muted small">Saved items (demo)</div>
+        </div>
+        <button class="icon-btn" id="drawerClose" aria-label="Close wishlist">×</button>
+      </div>
+      <div class="drawer-body" id="wishList">
+        <!-- JS injects wishlist -->
+      </div>
+      <div class="drawer-foot muted small">
+        Wishlist is stored locally in your browser for demo purposes.
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+  <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
 </body>
 </html>
