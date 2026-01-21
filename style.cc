@@ -27,7 +27,12 @@ body {
 
 a{color:inherit; text-decoration:none}
 .container{max-width:1120px; margin:0 auto; padding:0 18px}
-.muted{color:var(--muted)}
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+  .muted{color:var(--muted)}
 .small{font-size:13px}
 h1,h2,h3{letter-spacing:-0.02em}
 h1{font-size:44px; margin:10px 0 12px}
@@ -106,11 +111,14 @@ h3{font-size:18px; margin:0 0 8px}
 }
 
 .hero{padding:44px 0 18px}
-.hero-grid{
-  display:grid;
-  grid-template-columns: 1.35fr 0.95fr;
-  gap:18px;
-  align-items:stretch;
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  align-items: center;
+}
+.hero-copy {
+  max-width: 520px;
 }
 .kicker{
   display:inline-block;
@@ -451,4 +459,12 @@ textarea{min-height: 120px; resize: vertical}
   .form-row{grid-template-columns:1fr}
   h1{font-size:34px}
   .nav{display:none}
+}
+.section-head {
+  text-align: center;
+}
+
+.section-head p {
+  max-width: 640px;
+  margin: 0 auto;
 }
